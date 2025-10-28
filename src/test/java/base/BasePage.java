@@ -1,9 +1,10 @@
-package pages;
+package base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import utils.WaitUtils;
 
@@ -25,6 +26,7 @@ public class BasePage {
         this.waitUtils = new WaitUtils(driver);
         this.logger = LogManager.getLogger(this.getClass());
         this.actions = new Actions(driver);
+        PageFactory.initElements(driver, this);
     }
 
     /** --- Basic methods of interaction --- **/
@@ -201,6 +203,18 @@ public class BasePage {
     protected void rightClick(WebElement element) {
         actions.contextClick(element).perform();
         logger.info("Right-clicked: " + element);
+    }
+
+    protected boolean isElementDisplayed(WebElement element) {
+        try {
+            waitUtils.waitForElementToBeVisible(element);
+            boolean isDisplayed = element.isDisplayed();
+            logger.info("Element is displayed: {}", isDisplayed);
+            return isDisplayed;
+        } catch (Exception ex) {
+            logger.warn("Element not displayed: {}", ex.getMessage());
+            return false;
+        }
     }
 
 }

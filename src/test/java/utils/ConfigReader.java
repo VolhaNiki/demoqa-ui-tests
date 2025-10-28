@@ -23,14 +23,14 @@ public class ConfigReader {
     }
 
     public static String getBaseUrl() {
-        return get("base.url");
+        return props.getProperty("base.url", "https://demoqa.com/");
     }
 
     public static String getBrowser() {
-        return get("browser");
+        return props.getProperty("browser", "chrome");
     }
 
     public static int getTimeout() {
-        return Integer.parseInt(get("timeout"));
+        return Integer.parseInt(props.getProperty("timeout", "10"));
     }
 }

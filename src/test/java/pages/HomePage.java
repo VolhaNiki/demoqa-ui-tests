@@ -1,16 +1,18 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
+
     }
 
-    @FindBy(className = "category-cards")
+    @FindBy(css = ".category-cards")
     private WebElement pageTitle;
 
     @FindBy(xpath = "//h5[contains(text(), 'Elements')]/ancestor::div[@class='card mt-4 top-card']")
@@ -32,7 +34,7 @@ public class HomePage extends BasePage{
     private WebElement bookStoreCard;
 
     public boolean isPageOpened(){
-       return pageTitle.isDisplayed();
+       return isElementDisplayed(pageTitle);
     }
 
     public ElementsPage openElements(){
