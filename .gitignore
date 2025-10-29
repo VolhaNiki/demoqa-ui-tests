@@ -12,4 +12,4 @@
 .idea/libraries/
 *.iws
 *.ipr
-
+/logs/

@@ -25,5 +25,4 @@ public class HomePageTest extends BaseTest {
         ElementsPage elementsPage = homePage.openElements();
         Assert.assertTrue(driver.getCurrentUrl().contains("elements"), "Should navigate to Elements section");
     }
-
 }
