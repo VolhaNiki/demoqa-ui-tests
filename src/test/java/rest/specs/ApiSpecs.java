@@ -17,4 +17,8 @@ public class ApiSpecs {
     public static ResponseSpecification successSpec = new ResponseSpecBuilder()
             .expectStatusCode(anyOf(is(200), is(201)))
             .build();
+
+    public static final ResponseSpecification success201Spec = new ResponseSpecBuilder()
+            .expectStatusCode(201)
+            .build();
 }
