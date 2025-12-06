@@ -3,7 +3,7 @@ package tests.restTests;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import rest.base.BaseTest;
+import rest.base.BaseTestApi;
 import rest.model.product.ProductRequest;
 import rest.model.product.ProductResponse;
 import rest.specs.ApiSpecs;
@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
 @Test
-public class ProductTest extends BaseTest {
+public class ProductApiTest extends BaseTestApi {
     public void getProductTest() {
         given().log().all()
                 .when()

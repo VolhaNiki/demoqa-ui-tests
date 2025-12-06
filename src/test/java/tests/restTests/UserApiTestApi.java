@@ -4,7 +4,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import rest.base.BaseTest;
+import rest.base.BaseTestApi;
 import rest.model.user.UserCreate;
 import rest.model.user.UserResponse;
 
@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.given;
 import static rest.specs.ApiSpecs.successSpec;
 
 @Test
-public class UserApiTest extends BaseTest {
+public class UserApiTestApi extends BaseTestApi {
 
   public void createUserTest(){
         String userName = "autotest_user_" + System.currentTimeMillis();
