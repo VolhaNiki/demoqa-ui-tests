@@ -15,13 +15,11 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserCreate {
+    private String email;
     private String username;
     private String password;
-    private String email;
-
     @JsonProperty("firstName")
     private String firstName;
-
     @JsonProperty("lastName")
     private String lastName;
 }
