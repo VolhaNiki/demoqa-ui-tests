@@ -1,4 +1,4 @@
-package tests.restTests;
+package selenium.tests.restTests;
 
 import org.testng.annotations.Test;
 import rest.base.BaseTestApi;

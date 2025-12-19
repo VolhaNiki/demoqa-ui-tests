@@ -1,12 +1,12 @@
-package cucumber.steps;
+package selenium.cucumber.steps;
 
-import base.DriverFactory;
+import selenium.base.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import pages.HomePage;
+import selenium.pages.HomePage;
 
 public class StepDefs {
     private final WebDriver driver;

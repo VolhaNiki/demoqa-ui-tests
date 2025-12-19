@@ -1,6 +1,6 @@
-package utils;
+package selenium.utils;
 
-import base.DriverFactory;
+import selenium.base.DriverFactory;
 import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

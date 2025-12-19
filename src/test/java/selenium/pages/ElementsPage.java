@@ -1,6 +1,6 @@
-package pages;
+package selenium.pages;
 
-import base.BasePage;
+import selenium.base.BasePage;
 import org.openqa.selenium.WebDriver;
 
 public class ElementsPage extends BasePage {

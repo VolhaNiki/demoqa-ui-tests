@@ -1,12 +1,11 @@
-package base;
+package selenium.base;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import pages.HomePage;
-import utils.ConfigReader;
-import utils.TestListener;
+import selenium.utils.ConfigReader;
+import selenium.utils.TestListener;
 
 /**
  * Base test with setup and teardown.

@@ -1,11 +1,11 @@
-package tests;
+package selenium.tests;
 
-import base.BaseTest;
+import selenium.base.BaseTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.ElementsPage;
-import pages.HomePage;
+import selenium.pages.ElementsPage;
+import selenium.pages.HomePage;
 
 /**
  * Tests for the demoqa.com homepage

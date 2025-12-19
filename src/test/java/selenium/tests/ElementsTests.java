@@ -1,4 +1,4 @@
-package tests;
+package selenium.tests;
 
 public class ElementsTests {
 }

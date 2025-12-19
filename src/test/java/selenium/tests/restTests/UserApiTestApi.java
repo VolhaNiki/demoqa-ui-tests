@@ -1,4 +1,4 @@
-package tests.restTests;
+package selenium.tests.restTests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
